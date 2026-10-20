@@ -4,7 +4,6 @@
     <list default="true" id="bf28bdf8-9e89-4cbe-a854-900e157eacbc" name="Changes" comment="Adding sample diagrams and feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/diagrams/domain-model.puml" beforeDir="false" afterPath="$PROJECT_DIR$/diagrams/domain-model.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/use-case-model.puml" beforeDir="false" afterPath="$PROJECT_DIR$/diagrams/use-case-model.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +33,12 @@
     &quot;assignee&quot;: &quot;Teg-roeg&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Teg-roeg/RegionalDeliveryCoordinationService_HT.git&quot;,
-    &quot;accountId&quot;: &quot;badd137d-1d79-46b2-a3f8-bffb268e2f69&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Teg-roeg/RegionalDeliveryCoordinationService_HT.git",
+    "accountId": "1980d057-8b76-4447-ad68-4f9dfa72d33b"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
   &quot;fromUser&quot;: false
@@ -136,5 +135,9 @@
     <MESSAGE value="Adding sample uml and features" />
     <MESSAGE value="Adding sample diagrams and feature" />
     <option name="LAST_COMMIT_MESSAGE" value="Adding sample diagrams and feature" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
