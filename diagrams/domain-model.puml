@@ -1,15 +1,100 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+hide circle
+hide methods
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing true
+skinparam backgroundColor White
 
-autonumber
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1565C0
+  HeaderBackgroundColor #1565C0
+  HeaderFontColor White
+  FontColor #FFFFFFF
+}
 
-== Initialization ==
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+class Customer {
+  name
+  contactDetails
+}
 
-== Repetition ==
+class Producer {
+  name
+  collectionAddress
+  contactDetails
+}
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+class DeliveryRequest {
+  serviceDate
+  destination
+  goodsDescription
+  quantity
+  handlingRequirement
+  timingRequirement
+  status
+}
+
+class Consignment {
+  description
+  quantity
+  size
+  weight
+  fragility
+  temperatureNeed
+  loadingPosition
+  status
+}
+
+class Vehicle {
+  capacity
+  access
+  temperatureCapability
+}
+
+class Driver {
+  availability
+  licence
+  localAccessConstraint
+}
+
+class Route {
+  routeDate
+  readinessStatus
+}
+
+class RouteVersion {
+  versionNumber
+  publishedDateTime
+}
+
+class DepotCheck {
+  checkedDateTime
+  quantityConfirmed
+  condition
+  result
+}
+
+class DeliveryOutcome {
+  outcomeType
+  recordedDateTime
+  notes
+}
+
+Customer " 1" -- "0..*	" DeliveryRequest : places
+Producer "1   " -- "0..*" DeliveryRequest : is collection point for
+DeliveryRequest "1..*	" -- "1..*	" Consignment : is fulfilled by
+Consignment "0..*" -- "0..1" Route : is loaded on
+Route "1  " -- "1..*  " RouteVersion : has
+
+Vehicle "0..1  " -- "0..*	" Route : is used on
+Driver "0..1   " -- "	0..*" Route : drives
+Consignment "1" -- "0..*" DepotCheck : is checked by
+Consignment "1" -- "		0..*" DeliveryOutcome : results in
+Driver "1 " -- "0..*" DeliveryOutcome : records
+
+
+
 @enduml

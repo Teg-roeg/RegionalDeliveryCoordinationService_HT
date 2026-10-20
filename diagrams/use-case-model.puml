@@ -1,15 +1,51 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+!define LIGHTRED
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+left to right direction
+skinparam packageStyle package
+skinparam defaultFontName "Segoe UI"
+skinparam shadowing false
 
-autonumber
+package Internal {
+  actor "Route Coordinator" as RC
+  actor "Fleet Planner" as FP
+  actor "Depot Worker" as DW
+  actor "Driver" as DR
+}
 
-== Initialization ==
+package External {
+  actor "Producer" as PR
+  actor "Customer" as CU
+}
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+package "Regional Delivery Coordination Service" {
+  usecase "Record Delivery Request" as UC01
+  usecase "Plan Route" as UC02
+  usecase "Publish Route Version" as UC03
+  usecase "View Current Route" as UC04
+  usecase "Receive and Check Consignment" as UC05
 
-== Repetition ==
+  usecase "Confirm Dispatch Readiness" as UC06
+  usecase "Record Delivery Outcome" as UC07
+  usecase "Notify Delivery Status Change" as UC08
+  usecase "Generate Operational Report" as UC09
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+
+}
+
+RC --> UC01
+RC --> UC02
+RC --> UC03
+RC --> UC06
+RC --> UC08
+RC --> UC09
+FP --> UC02
+
+DW --> UC05
+DR --> UC04
+DR --> UC07
+UC08 --> CU
+UC08 --> PR
+
+
 @enduml
