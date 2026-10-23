@@ -1,5 +1,13 @@
 # RegionalDeliveryCoordinationService_HT
 
+# Overview
+
+This project focuses on analysing requirements and modelling a proposed Regional Delivery Coordination Service for the Kerry Regional Distribution Network. The service aims to improve the coordination of delivery requests, consignments, vehicles, drivers, routes, depot operations and delivery outcomes.
+
+# Project Scope
+
+The project includes functional and non-functional requirements, stakeholder analysis, user stories, use cases, Gherkin acceptance criteria, business rules, a conceptual domain model and a traceability matrix.
+
 ## Working directory paths
 
 ```
