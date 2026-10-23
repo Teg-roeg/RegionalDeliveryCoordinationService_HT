@@ -7,7 +7,8 @@ RegionalDeliveryCoordinationService_HT/
   README.md
   UserStories_DOC.docx
   SAAD71000_CA1_Scenario_22_Regional_Delivery_Coordination_Service.docx
-  report/
+  references/
+    AI Declaration & References.docx
   requirements/
     Requirements & Stakeholders - OOP.docx
   features/
