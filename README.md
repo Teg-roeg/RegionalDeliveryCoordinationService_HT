@@ -1,6 +1,6 @@
 # RegionalDeliveryCoordinationService_HT
 
-
+'''
 RegionalDeliveryCoordinationService_HT/
   README.md
   UserStories_DOC.docx
@@ -14,3 +14,4 @@ RegionalDeliveryCoordinationService_HT/
   diagrams/
     domain-model.puml
     use-case-model.puml
+'''
